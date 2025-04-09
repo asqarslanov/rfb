@@ -1,0 +1,6 @@
+precompiled_binaries:
+  # Uri prefix used when downloading precompiled binaries.
+  url_prefix: https://github.com/asqarslanov/rfb/releases/download/precompiled_
+
+  # Public key for verifying downloaded precompiled binaries.
+  public_key: d082891ca0224337cbe3766e1726b2efa2b3f92992eb242f14e6db5e9e098e4e
