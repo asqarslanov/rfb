@@ -12,8 +12,8 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macOS-latest
-          - windows-latest
+          # - macOS-latest
+          # - windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: dart-lang/setup-dart@v1
@@ -29,7 +29,7 @@ jobs:
       #     PRIVATE_KEY: ${{ secrets.RELEASE_PRIVATE_KEY }}
       - name: Precompile (with Android)
         if: (matrix.os == 'ubuntu-latest')
-        run: dart run build_tool precompile-binaries -v --manifest-dir=../../../rust/ --repository=asqarslanov/rfb --android-sdk-location=/usr/local/lib/android/sdk # --android-ndk-version=24.0.8215888 --android-min-sdk-version=23
+        run: dart run build_tool precompile-binaries -v --manifest-dir=../../../rust/ --repository=asqarslanov/rfb --android-sdk-location=/usr/local/lib/android/sdk --android-ndk-version=24.0.8215888 --android-min-sdk-version=23
         working-directory: trails_mobile/rust_builder/cargokit/build_tool/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
