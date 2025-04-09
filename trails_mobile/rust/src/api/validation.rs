@@ -1,3 +1,5 @@
+// foo
+
 #[flutter_rust_bridge::frb(sync)]
 pub fn validate_email(value: &str) -> bool {
     validation::validate_email(value)
